@@ -1,0 +1,48 @@
+# ============================================================
+# TenderGuard — Konfigurasi Sistem
+# Sesuai TRD Section 4
+# ============================================================
+
+data:
+  target_region: "DKI Jakarta"
+  target_years: [2023, 2024]
+  cpv_codes: ["45"]            # Kode CPV konstruksi
+  min_tender_value: 100000000  # Minimum 100 juta rupiah
+  page_size: 100
+  rate_limit_delay: 0.1        # Detik antar request
+
+graph:
+  min_co_participation: 2      # Minimum co-participation untuk membuat edge
+  max_nodes: 5000              # Batas node untuk performance
+
+detection:
+  isolation_forest:
+    contamination: 0.05
+    n_estimators: 200
+    random_state: 42
+  community:
+    resolution: 1.0            # Resolusi Louvain
+    min_community_size: 3
+  gnn:
+    hidden_dim: 64
+    epochs: 100
+    lr: 0.001
+
+scoring:
+  weights:
+    isolation_forest: 0.35
+    community: 0.30
+    heuristic: 0.35
+  thresholds:
+    high: 0.70
+    medium: 0.40
+
+output:
+  dashboard_port: 8501
+  export_format: ["csv", "html"]
+  network_output: "data/vendor_network.html"
+  report_output: "data/processed/risk_report.csv"
+
+logging:
+  level: "INFO"
+  file: "logs/tenderguard.log"

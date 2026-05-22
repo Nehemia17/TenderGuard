@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ═══ GLOBAL RESET ═══ */
+html, body { background: #0a0a0a !important; }
+html,body,[class*="css"] { font-family: 'Inter',-apple-system,sans-serif !important; color: #cccccc; }
+
+/* ═══ ALL STREAMLIT CONTAINERS → BLACK ═══ */
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stAppViewBlockContainer"],
+[data-testid="stMainBlockContainer"],
+[data-testid="block-container"],
+[data-testid="stVerticalBlock"],
+[data-testid="stHorizontalBlock"],
+.main, .main > div, section.main {
+    background-color: #0a0a0a !important;
+}
+
+/* Toolbar / Header bar */
+[data-testid="stHeader"],
+[data-testid="stToolbar"],
+header[data-testid="stHeader"] {
+    background: #0a0a0a !important;
+    border-bottom: 1px solid #2a2a2a !important;
+}
+
+/* ═══ SIDEBAR ═══ */
+section[data-testid="stSidebar"],
+section[data-testid="stSidebar"] > div,
+section[data-testid="stSidebar"] [data-testid="stVerticalBlock"] {
+    background-color: #0a0a0a !important;
+}
+section[data-testid="stSidebar"] { border-right: 1px solid #2a2a2a !important; }
+
+/* ═══ TYPOGRAPHY ═══ */
+h1, h2, h3, h4, h5, h6,
+[data-testid="stMarkdownContainer"] h1,
+[data-testid="stMarkdownContainer"] h2,
+[data-testid="stMarkdownContainer"] h3 {
+    color: #ffffff !important;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+[data-testid="stMarkdownContainer"] p,
+[data-testid="stMarkdownContainer"] li { color: #cccccc !important; }
+[data-testid="stMarkdownContainer"] strong { color: #ffffff !important; }
+[data-testid="stMarkdownContainer"] code {
+    background: #1a1a1a !important;
+    color: #faff69 !important;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace !important;
+    padding: 1px 6px;
+}
+[data-testid="stMarkdownContainer"] blockquote {
+    border-left: 3px solid #faff69;
+    padding-left: 1rem;
+    color: #888888 !important;
+}
+
+/* ═══ METRIC CARDS ═══ */
+[data-testid="metric-container"] {
+    background: #1a1a1a !important;
+    border: 1px solid #2a2a2a !important;
+    border-radius: 12px !important;
+    padding: 1.25rem 1.5rem !important;
+}
+[data-testid="stMetricValue"] {
+    color: #faff69 !important;
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    letter-spacing: -1.5px !important;
+}
+[data-testid="stMetricLabel"] {
+    color: #888888 !important;
+    font-size: 0.7rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+}
+[data-testid="stMetricDelta"] { color: #22c55e !important; }
+
+/* ═══ TABS ═══ */
+.stTabs [data-baseweb="tab-list"] {
+    background: #121212 !important;
+    border: 1px solid #2a2a2a !important;
+    border-radius: 8px !important;
+    padding: 4px !important;
+    gap: 2px !important;
+}
+.stTabs [data-baseweb="tab"] {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 6px !important;
+    color: #888888 !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    padding: 8px 18px !important;
+}
+.stTabs [data-baseweb="tab"]:hover {
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+}
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+    background: #faff69 !important;
+    color: #0a0a0a !important;
+    font-weight: 700 !important;
+}
+.stTabs [data-baseweb="tab-highlight"],
+.stTabs [data-baseweb="tab-border"] { display: none !important; }
+[data-testid="stTabsContent"] {
+    background: #0a0a0a !important;
+    padding-top: 1.5rem;
+}
+
+/* ═══ BUTTONS ═══ */
+.stButton > button {
+    background: #faff69 !important;
+    color: #0a0a0a !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+    padding: 10px 20px !important;
+    transition: background 0.15s !important;
+}
+.stButton > button:hover { background: #e6eb52 !important; }
+[data-testid="stDownloadButton"] > button {
+    background: #1a1a1a !important;
+    color: #faff69 !important;
+    border: 1px solid #2a2a2a !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+}
+[data-testid="stDownloadButton"] > button:hover {
+    background: #faff69 !important;
+    color: #0a0a0a !important;
+}
+
+/* ═══ DATAFRAME ═══ */
+.stDataFrame,
+[data-testid="stDataFrame"],
+[data-testid="stDataFrameResizable"] {
+    background: #1a1a1a !important;
+    border: 1px solid #2a2a2a !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+/* ═══ FORMS (select, slider, multiselect) ═══ */
+[data-baseweb="select"] > div {
+    background: #1a1a1a !important;
+    border: 1px solid #2a2a2a !important;
+    border-radius: 8px !important;
+    color: #cccccc !important;
+}
+[data-baseweb="popover"],
+[data-baseweb="menu"] { background: #1a1a1a !important; border: 1px solid #2a2a2a !important; }
+[data-baseweb="menu"] li:hover { background: #242424 !important; }
+[data-baseweb="menu"] li { color: #cccccc !important; }
+[data-baseweb="tag"] {
+    background: #242424 !important;
+    border: 1px solid #3a3a3a !important;
+    color: #ffffff !important;
+}
+[data-baseweb="slider"] [role="progressbar"] { background: #faff69 !important; }
+[data-baseweb="slider"] [role="slider"] { background: #faff69 !important; border-color: #faff69 !important; }
+[data-testid="stSlider"] p { color: #faff69 !important; font-weight: 600 !important; }
+
+/* ═══ ALERTS ═══ */
+[data-testid="stAlert"] {
+    background: #1a1a1a !important;
+    border: 1px solid #2a2a2a !important;
+    border-radius: 12px !important;
+}
+[data-testid="stAlert"] p { color: #cccccc !important; }
+
+/* ═══ DIVIDER ═══ */
+hr { border: none !important; border-top: 1px solid #2a2a2a !important; margin: 1rem 0 !important; }
+
+/* ═══ CUSTOM COMPONENTS ═══ */
+
+/* Page header */
+.tg-header {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-left: 4px solid #faff69;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+}
+.tg-header h1 {
+    color: #ffffff;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    margin: 0;
+    line-height: 1.1;
+}
+.tg-header span.brand { color: #faff69; }
+.tg-header p { color: #888888; margin: 0.4rem 0 0; font-size: 0.825rem; line-height: 1.5; }
+
+/* Labels */
+.section-label {
+    font-size: 0.68rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    color: #5a5a5a !important;
+    margin-bottom: 0.4rem;
+    display: block;
+}
+.section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.3px;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #2a2a2a;
+    margin-bottom: 1rem;
+}
+.section-title span { color: #faff69; }
+
+/* Risk badges */
+.badge-high   { background:#ef4444; color:#fff;    padding:3px 12px; border-radius:9999px; font-size:0.75rem; font-weight:700; display:inline-block; }
+.badge-medium { background:#faff69; color:#0a0a0a; padding:3px 12px; border-radius:9999px; font-size:0.75rem; font-weight:700; display:inline-block; }
+.badge-low    { background:#22c55e; color:#0a0a0a; padding:3px 12px; border-radius:9999px; font-size:0.75rem; font-weight:700; display:inline-block; }
+
+/* Stat callout (yellow large numbers) */
+.stat-callout { font-size:2.5rem; font-weight:700; color:#faff69; letter-spacing:-1.5px; line-height:1; }
+.stat-label { font-size:0.7rem; font-weight:600; color:#888; text-transform:uppercase; letter-spacing:1.5px; margin-top:4px; }
+
+/* Code card */
+.code-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: #cccccc;
+}
+
+/* Plotly */
+.js-plotly-plot .plotly,
+.js-plotly-plot .plotly svg { background: transparent !important; }

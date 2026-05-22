@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Streamlit
+.streamlit/
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Data files (optional: kita biarkan data sintetis agar juri bisa langsung demo)
+# Jika ingin tidak mengunggah data, hapus tanda pagar di bawah ini:
+# data/raw/
+# data/processed/
+# tenderguard.db
+
+# OS generated files
+.DS_Store
+Thumbs.db
