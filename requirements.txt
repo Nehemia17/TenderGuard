@@ -1,34 +1,21 @@
-# ============================================================
-# TenderGuard — Requirements
-# Graph Mining untuk Deteksi Kolusi Tender LPSE Nasional
-# ============================================================
+# Inti Data Science
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.2.0
 
-# --- Data ---
-pandas>=2.0
-numpy>=1.26
-requests>=2.31
-beautifulsoup4>=4.12
-scrapy>=2.11
-rapidfuzz>=3.0
-duckdb>=0.10
+# NLP untuk Bahasa Indonesia
+Sastrawi>=1.0.1
+nltk>=3.8.1
 
-# --- Graph ---
-networkx>=3.2
-python-louvain>=0.16
-pyvis>=0.3
+# Visualisasi & Dashboard
+streamlit>=1.30.0
+plotly>=5.10.0
 
-# --- ML ---
-scikit-learn>=1.4
-torch>=2.2
-torch-geometric>=2.5
+# Web Scraping (Ekstraksi URL)
+requests>=2.28.0
+beautifulsoup4>=4.11.0
 
-# --- Visualization & Dashboard ---
-streamlit>=1.30
-plotly>=5.18
-matplotlib>=3.8
-seaborn>=0.13
-
-# --- Utils ---
-pyyaml>=6.0
-tqdm>=4.66
-pytest>=8.0
+# Utils
+joblib>=1.3.0
+PyYAML>=6.0
+PyYAML>=6.0

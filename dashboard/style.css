@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6,
 
 /* ═══ BUTTONS ═══ */
 .stButton > button {
-    background: #faff69 !important;
+    background: #2f3020 !important;
     color: #0a0a0a !important;
     border: none !important;
     border-radius: 8px !important;
@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6,
     overflow: hidden !important;
 }
 
-/* ═══ FORMS (select, slider, multiselect) ═══ */
+/* ═══ FORMS (select, slider, multiselect, textarea) ═══ */
 [data-baseweb="select"] > div {
     background: #1a1a1a !important;
     border: 1px solid #2a2a2a !important;
@@ -166,6 +166,29 @@ h1, h2, h3, h4, h5, h6,
 [data-baseweb="slider"] [role="progressbar"] { background: #faff69 !important; }
 [data-baseweb="slider"] [role="slider"] { background: #faff69 !important; border-color: #faff69 !important; }
 [data-testid="stSlider"] p { color: #faff69 !important; font-weight: 600 !important; }
+
+/* Text Area Customization */
+[data-baseweb="textarea"] {
+    background-color: #1a1a1a !important;
+    border: 1px solid #2a2a2a !important;
+    border-radius: 8px !important;
+    transition: all 0.2s ease-in-out;
+}
+[data-baseweb="textarea"]:focus-within {
+    border-color: #faff69 !important;
+    box-shadow: 0 0 0 1px #faff69 !important;
+}
+[data-baseweb="textarea"] textarea {
+    color: #ffffff !important;
+    font-size: 1.05rem !important;
+    line-height: 1.6 !important;
+}
+[data-testid="stTextArea"] label p {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    color: #888888 !important;
+    margin-bottom: 0.5rem !important;
+}
 
 /* ═══ ALERTS ═══ */
 [data-testid="stAlert"] {
